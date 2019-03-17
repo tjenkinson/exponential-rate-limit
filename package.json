@@ -3,8 +3,9 @@
   "version": "1.0.1",
   "description": "A small library which handles decaying exponential backoff. This is useful if you want to start throttling something whilst it is going wrong, but recover once things start working again.",
   "main": "./dist/exponential-rate-limit.js",
+  "types": "./dist/exponential-rate-limit.d.ts",
   "scripts": {
-    "build": "parcel build --out-dir './dist' --global ExponentialRateLimit ./src/exponential-rate-limit.ts",
+    "build": "tsc --emitDeclarationOnly && parcel build --out-dir './dist' --global ExponentialRateLimit ./src/exponential-rate-limit.ts",
     "buildDemo": "parcel build --out-dir './demo-build' ./src/demo.html",
     "start": "parcel serve --out-dir './demo-build' ./src/demo.html",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
