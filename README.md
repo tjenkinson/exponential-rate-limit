@@ -6,6 +6,8 @@ The demo source is in "[demo.ts](/src/demo.ts)".
 
 To run the demo locally run `npm run start`.
 
+It is also hosted [here](https://exponential-rate-limit.netlify.com/demo.html) (thanks to [Netify](https://www.netlify.com/)).
+
 ## Usage
 ```ts
 import { JobQueue, defaultDelayFunction } from './exponential-rate-limit';
