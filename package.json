@@ -1,6 +1,6 @@
 {
   "name": "exponential-rate-limit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small library which handles decaying exponential backoff. This is useful if you want to start throttling something whilst it is going wrong, but recover once things start working again.",
   "main": "./dist/exponential-rate-limit.js",
   "scripts": {
