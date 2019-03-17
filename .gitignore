@@ -1,0 +1,4 @@
+/dist
+/demo-build
+.cache
+node_modules

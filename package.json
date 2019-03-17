@@ -1,0 +1,34 @@
+{
+  "name": "exponential-rate-limit",
+  "version": "1.0.0",
+  "description": "A small library which handles decaying exponential backoff. This is useful if you want to start throttling something whilst it is going wrong, but recover once things start working again.",
+  "main": "./dist/exponential-rate-limit.js",
+  "scripts": {
+    "build": "parcel build --out-dir './dist' --global ExponentialRateLimit ./src/exponential-rate-limit.ts",
+    "buildDemo": "parcel build --out-dir './demo-build' ./src/demo.html",
+    "start": "parcel serve --out-dir './demo-build' ./src/demo.html",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lintFix": "tslint -c tslint.json --fix 'src/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjenkinson/exponential-rate-limit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tjenkinson/exponential-rate-limit/issues"
+  },
+  "homepage": "https://github.com/tjenkinson/exponential-rate-limit#readme",
+  "keywords": [
+    "exponential",
+    "backoff",
+    "retry",
+    "decay"
+  ],
+  "author": "Tom Jenkinson <tjcode@outlook.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "parcel": "^1.12.2",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.3333"
+  }
+}
