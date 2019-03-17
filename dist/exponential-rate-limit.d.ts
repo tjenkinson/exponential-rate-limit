@@ -30,7 +30,7 @@ export declare class JobQueue {
      *
      * @param job A function which will be executed asychronously. It will receive `JobMetadata`,
      *            which includes the time the job was queued. If it returns `true` or a promise
-     *            that resolves with `true` (or rejects), the delays between jobs will start decreasing.
+     *            that resolves with `true`, the delays between jobs will start decreasing.
      */
     enqueue(job: Job): {
         remove: () => void;

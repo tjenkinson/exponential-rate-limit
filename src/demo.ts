@@ -4,7 +4,9 @@ const btn = document.getElementById('fire-btn')! as HTMLButtonElement;
 const output = document.getElementById('output')! as HTMLDivElement;
 const successCheckbox = document.getElementById('success-checkbox')! as HTMLInputElement;
 
-const queue = new JobQueue();
+const queue = new JobQueue({
+  maxInterval: 30
+});
 
 btn.addEventListener('click', () => {
   queue.enqueue(({ enqueueTime }) => {

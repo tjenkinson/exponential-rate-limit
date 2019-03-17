@@ -46,7 +46,7 @@ export class JobQueue {
    *
    * @param job A function which will be executed asychronously. It will receive `JobMetadata`,
    *            which includes the time the job was queued. If it returns `true` or a promise
-   *            that resolves with `true` (or rejects), the delays between jobs will start decreasing.
+   *            that resolves with `true`, the delays between jobs will start decreasing.
    */
   public enqueue(job: Job): { remove: () => void } {
     const jobHolder = { job, metadata: { enqueueTime: Date.now() } };
@@ -87,9 +87,6 @@ export class JobQueue {
           this._x.increment(-2);
         } else if (res && typeof res.then === 'function') {
           res.then((a) => a && this._x.increment(-2));
-          if (typeof res.catch === 'function') {
-            res.catch(() => this._x.increment(-2));
-          }
         }
       });
     }

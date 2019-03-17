@@ -6,7 +6,7 @@ export interface JobMetadata {
 }
 /**
  * The function which will be executed aynchronously. If it returns `true` or a promise
- * which resolves with `true` (or rejects), then the delays between jobs will start decreasing.
+ * which resolves with `true`, then the delays between jobs will start decreasing.
  */
 export declare type Job = (jobMetadata: JobMetadata) => Promise<boolean> | boolean | void;
 export interface Config {
