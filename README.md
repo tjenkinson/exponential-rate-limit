@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/exponential-rate-limit.svg)](https://badge.fury.io/js/exponential-rate-limit)
 # Exponential Rate Limit
 A small library which handles decaying exponential backoff. This is useful if you want to start throttling something whilst it is going wrong, but recover once things start working again.
 
