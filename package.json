@@ -31,5 +31,12 @@
     "parcel": "^1.12.2",
     "tslint": "^5.14.0",
     "typescript": "^3.3.3333"
+  },
+  "peerDependencies": {
+    "@types/node": "^12.6",
+    "typescript": "^3.0"
+  },
+  "dependencies": {
+    "@types/node": "^12.6.2"
   }
 }
