@@ -37,6 +37,6 @@
     "typescript": "^3.0"
   },
   "dependencies": {
-    "@types/node": "^12.6.2"
+    "@types/node": "^13.9.0"
   }
 }
